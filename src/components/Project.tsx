@@ -124,7 +124,7 @@ export const ProjectSummary: React.FC<Project> = ({ key, title, role, group, des
       <p>{description}</p>
       <div>
       {links.map(l => (
-        <a key={l.url} href={l.url}><ProjectIcon type={l.icon} /></a>
+        <a key={l.url} href={l.url} target="_blank" rel="noreferrer"><ProjectIcon type={l.icon} /></a>
       ))}
       {!!year && <time>{year}</time>}
       </div>
