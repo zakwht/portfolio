@@ -4,19 +4,15 @@
     "title": "Universal Search",
     "role": "Primary Developer",
     "group": "Regroove",
-    "description": "yaml. Imagine if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et ligma.",
+    "description": "A SharePoint Framework (SPFx) webpart for searching various host engines (most helpfully, Microsoft 365). Designed with TypeScript and React, and compatible with SharePoint and Teams.",
     "links": [
       {
-        "icon": "website",
-        "url": "https://now.regroove.ca"
-      },
-      {
         "icon": "github",
-        "url": "abc"
+        "url": "https://github.com/regroove-solutions/universal-search-web-part"
       },
       {
         "icon": "blog",
-        "url": "github"
+        "url": "https://getnavo.com/blog/regroove-web-parts-universal-search/"
       }
     ],
     "year": "2020"
@@ -25,7 +21,7 @@
     "key": "roku",
     "title": "Roku ECP Wrapper",
     "role": "Personal Project",
-    "description": "some text here.",
+    "description": "A NodeJS package that empowers users to control Roku devices using TypeScript. The package is a TS-compatible wrapper for the Roku External Control Protocol.",
     "links": [
       {
         "icon": "npm",
@@ -33,7 +29,7 @@
       },
       {
         "icon": "github",
-        "url": "github"
+        "url": "https://github.com/zakwht/roku"
       }
     ],
     "year": "2021"
@@ -42,7 +38,7 @@
     "key": "apod",
     "title": "APOD Browser Extension",
     "role": "Personal Project",
-    "description": "api, ne if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et convallis turpis",
+    "description": "A browser extension that showcases NASA's Astronomy Photo of the Day! The app is built using TypeScript and React and leverages NASA's open API for photos.",
     "links": [
       {
         "icon": "chrome",
@@ -50,16 +46,16 @@
       },
       {
         "icon": "github",
-        "url": "github.com"
+        "url": "https://github.com/zakwht/apod"
       }
     ],
     "year": "2020"
   },
   {
     "key": "ghibli",
-    "title": "Ghibli Browser Extension",
+    "title": "Studio Ghibli Browser Extension",
     "role": "Personal Project",
-    "description": "api, ne if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et convallis turpis",
+    "description": "A browser extension that showcases stills from Studio Ghibli films as new tab backgrounds. The app is built with TypeScript and React, and a custom Python script used to scrape the Studio Ghibli media site.",
     "links": [
       {
         "icon": "chrome",
@@ -67,7 +63,7 @@
       },
       {
         "icon": "github",
-        "url": "github.com"
+        "url": "https://github.com/zakwht/ghibli"
       }
     ],
     "year": "2022"
@@ -77,7 +73,7 @@
     "title": "Tasks Bot",
     "role": "Primary Developer",
     "group": "Regroove",
-    "description": "Made a bot using the Bot Framework that runs in Microsoft Teams, uses the Graph API to add tasks to To-Do/Planner. Azure.",
+    "description": "A Microsoft Teams bot that connects with the Graph API to add tasks to To-Do/Planner. The bot is built using TypeScript and hosted in Microsoft Azure.",
     "links": [
       {
         "icon": "blog",
@@ -90,7 +86,7 @@
     "key": "mastermind",
     "title": "Mastermind",
     "role": "Personal Project",
-    "description": "Made with Python using the Tkinter library as an introduction project to working with GUIs in python.",
+    "description": "A Python implementation of an interesting board game, developed as a introduction project to working with GUIs in Python.",
     "links": [
       { "icon": "github", "url": "https://github.com/zakwht/mastermind " }
     ],
@@ -101,7 +97,7 @@
     "title": "Navo",
     "role": "Junior Developer",
     "group": "Regroove",
-    "description": "Organize company bookmarks across multi-platform app. Testing, front-end enhancements, etc?",
+    "description": "A web application for organizing company bookmarks across platforms, devices, and accounts. The app was built using TypeScript and Angular, and my contributions included front-end enhancements, compatibility with Microsoft apps, and testing automation.",
     "links": [
       {
         "icon": "website",
@@ -113,17 +109,17 @@
   {
     "key": "minesweeper",
     "title": "Minesweeper RL Agent",
-    "description": "AI",
+    "description": "Reinforcement learning agents designed to play Minesweeper using machine learning. The agents were implemented in Python using Q-learning and deep Q-learning, and iterated through stages of hyperparameter tuning to optimize solve rate.",
     "role": "Team Project",
     "group": "UVic",
     "links": [
       {
         "icon": "github",
-        "url": "https://github.com/chunthebear/deep-q-learning-Minesweeper"
+        "url": "https://github.com/zakwht/minesweeper"
       },
       {
         "icon": "report",
-        "url": "https://www.overleaf.com/project/6063fe74b8f71c697c077148/https://raw.githubusercontent.com/chunthebear/"
+        "url": "https://github.com/zakwht/minesweeper/blob/main/report/report.pdf"
       }
     ],
     "year": "2021"
@@ -133,11 +129,7 @@
     "title": "Linear Program Solver",
     "role": "Course Project",
     "group": "UVic",
-    "description": "Linear optimization algorithm using a matrix algebraic version of the Simplex Method, detect infeasibility/unboundedness, also: initially infeasible problem. Draw some square with arrows for logo.",
-    "links": [{
-      "icon": "github",
-      "url": "https://github.com/zakwht/simplex"
-    }],
+    "description": "A linear program solver that uses a matrix algebraic version of the Simplex Method, implemented in Python. The algorithm detects infeasibility and unboundedness, and solves problems that are initially unfeasible.",
     "year": "2021"
   },
   {
@@ -145,10 +137,10 @@
     "title": "Sneaker or Sandal Classifier",
     "role": "Course Project",
     "group": "UVic",
-    "description": "Gaussian SVM. Hyperparameter tuning.",
+    "description": "A classification model that uses a machine learning to categorize an image of a shoe as either a sneaker or a sandal. The model uses a support vector machine (SVM) powered by a Gaussian (RBF) kernel, and is implemented in Python.",
     "links": [{
       "icon": "github",
-      "url": "https://github.com/zakwht/simplex"
+      "url": "https://github.com/zakwht/sneaker-or-sandal"
     }],
     "year": "2021"
   },
@@ -157,10 +149,10 @@
     "title": "SARS-CoV-2 Research",
     "role": "Undergraduate Research",
     "group": "UVic",
-    "description": "Gaussian SVM. Hyperparameter tuning.",
+    "description": "Some thorough research into the role of machine learning in SARS-CoV-2 susceptibility classification in various host species. The research involved a series of categorical classification algorithms as well as computational biology algorithms. The implementation involved Python, R, and PyMOL.",
     "links": [{
       "icon": "github",
-      "url": "https://github.com/zakwht/simplex"
+      "url": "https://github.com/zakwht/sars-cov-2"
     }],
     "year": "2022"
   }

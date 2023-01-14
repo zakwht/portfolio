@@ -58,6 +58,10 @@ const ProjectText = styled.span`
     font-weight: 300;
     font-size: 0.8rem;
   }
+
+  div {
+    min-height: 22px;
+  }
 `
 
 const ProjectLogo = styled.div`

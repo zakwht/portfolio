@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Helmet } from "../components/Helmet";
+import Link from "next/link";
 
 const AboutStyled = styled.section`
   color: #eee;
@@ -9,6 +10,16 @@ const AboutStyled = styled.section`
   font-weight: 300;
   line-height: 1.5;
   letter-spacing: 0.02rem;
+
+  a {
+    color: mediumseagreen;
+    text-decoration: none;
+    
+    &:hover {
+      transition: all 0.5s;
+      filter: brightness(0.8);
+    }
+  }
 `
 
 export const AboutRoute: React.FC = () => (
@@ -25,6 +36,9 @@ export const AboutRoute: React.FC = () => (
       <p>
         Most of my development experience involves building web applications with React &amp; TypeScript, with a focus on encompassing the Semantic Web.
         I've worked within the scope of many programming paradigms, using languages including Java, Python, Racket, and R.
+      </p>
+      <p>
+        Checkout my <Link href="/projects">projects</Link>!
       </p>
     </AboutStyled>
   </>
