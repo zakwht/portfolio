@@ -22,20 +22,6 @@
     "year": "2020"
   },
   {
-    "title": "Logo Repo",
-    "role": "Product Owner",
-    "group": "Regroove",
-    "description": "This is all in yaml. Imagine if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et convallis turpis suscipit. Aliquam laoreet ligula lectus, in ",
-    "key": "logo-repo",
-    "links": [
-      {
-        "icon": "website",
-        "url": "https://thelogorepo.com"
-      }
-    ],
-    "year": "2021"
-  },
-  {
     "key": "roku",
     "title": "Roku ECP Wrapper",
     "role": "Personal Project",
@@ -68,6 +54,23 @@
       }
     ],
     "year": "2020"
+  },
+  {
+    "key": "ghibli",
+    "title": "Ghibli Browser Extension",
+    "role": "Personal Project",
+    "description": "api, ne if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et convallis turpis",
+    "links": [
+      {
+        "icon": "chrome",
+        "url": "chrome://extensions"
+      },
+      {
+        "icon": "github",
+        "url": "github.com"
+      }
+    ],
+    "year": "2022"
   },
   {
     "key": "ffl",
@@ -130,11 +133,35 @@
     "title": "Linear Program Solver",
     "role": "Course Project",
     "group": "UVic",
-    "description": "Linear optimization algorithm using a matrix algebraic version of the Simplex Method, detect infeasibility/unboundedness, also: initially infeasible problems. Latex some linalg matrix shit for this. Draw some square with arrows for logo.",
+    "description": "Linear optimization algorithm using a matrix algebraic version of the Simplex Method, detect infeasibility/unboundedness, also: initially infeasible problem. Draw some square with arrows for logo.",
     "links": [{
       "icon": "github",
       "url": "https://github.com/zakwht/simplex"
     }],
     "year": "2021"
+  },
+  {
+    "key": "sneakers",
+    "title": "Sneaker or Sandal Classifier",
+    "role": "Course Project",
+    "group": "UVic",
+    "description": "Gaussian SVM. Hyperparameter tuning.",
+    "links": [{
+      "icon": "github",
+      "url": "https://github.com/zakwht/simplex"
+    }],
+    "year": "2021"
+  },
+  {
+    "key": "thesis",
+    "title": "SARS-CoV-2 Research",
+    "role": "Undergraduate Research",
+    "group": "UVic",
+    "description": "Gaussian SVM. Hyperparameter tuning.",
+    "links": [{
+      "icon": "github",
+      "url": "https://github.com/zakwht/simplex"
+    }],
+    "year": "2022"
   }
 ]
