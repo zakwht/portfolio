@@ -1,0 +1,140 @@
+[
+  {
+    "key": "universal-search",
+    "title": "Universal Search",
+    "role": "Primary Developer",
+    "group": "Regroove",
+    "description": "yaml. Imagine if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et ligma.",
+    "links": [
+      {
+        "icon": "website",
+        "url": "https://now.regroove.ca"
+      },
+      {
+        "icon": "github",
+        "url": "abc"
+      },
+      {
+        "icon": "blog",
+        "url": "github"
+      }
+    ],
+    "year": "2020"
+  },
+  {
+    "title": "Logo Repo",
+    "role": "Product Owner",
+    "group": "Regroove",
+    "description": "This is all in yaml. Imagine if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et convallis turpis suscipit. Aliquam laoreet ligula lectus, in ",
+    "key": "logo-repo",
+    "links": [
+      {
+        "icon": "website",
+        "url": "https://thelogorepo.com"
+      }
+    ],
+    "year": "2021"
+  },
+  {
+    "key": "roku",
+    "title": "Roku ECP Wrapper",
+    "role": "Personal Project",
+    "description": "some text here.",
+    "links": [
+      {
+        "icon": "npm",
+        "url": "npmjs.org/npm/packages/roku-ecp"
+      },
+      {
+        "icon": "github",
+        "url": "github"
+      }
+    ],
+    "year": "2021"
+  },
+  {
+    "key": "apod",
+    "title": "APOD Browser Extension",
+    "role": "Personal Project",
+    "description": "api, ne if I typed a long long paragraph about it... wouldn't that be quite something! Antum. Etiam accumsan maximus orci ut porta. Curabitur est ante, commodo sed nunc id, tincidunt efficitur nunc. Vestibulum pharetra mi id arcu placerat, et convallis turpis",
+    "links": [
+      {
+        "icon": "chrome",
+        "url": "chrome://extensions"
+      },
+      {
+        "icon": "github",
+        "url": "github.com"
+      }
+    ],
+    "year": "2020"
+  },
+  {
+    "key": "ffl",
+    "title": "Tasks Bot",
+    "role": "Primary Developer",
+    "group": "Regroove",
+    "description": "Made a bot using the Bot Framework that runs in Microsoft Teams, uses the Graph API to add tasks to To-Do/Planner. Azure.",
+    "links": [
+      {
+        "icon": "blog",
+        "url": "https://regroove.ca/blog/we-built-a-task-bot-for-microsoft-teams-and-were-not-going-to-use-it/"
+      }
+    ],
+    "year": "2020"
+  },
+  {
+    "key": "mastermind",
+    "title": "Mastermind",
+    "role": "Personal Project",
+    "description": "Made with Python using the Tkinter library as an introduction project to working with GUIs in python.",
+    "links": [
+      { "icon": "github", "url": "https://github.com/zakwht/mastermind " }
+    ],
+    "year": "2018"
+  },
+  {
+    "key": "navo",
+    "title": "Navo",
+    "role": "Junior Developer",
+    "group": "Regroove",
+    "description": "Organize company bookmarks across multi-platform app. Testing, front-end enhancements, etc?",
+    "links": [
+      {
+        "icon": "website",
+        "url": "https://genavo.com"
+      }
+    ],
+    "year": "2020"
+  },
+  {
+    "key": "minesweeper",
+    "title": "Minesweeper RL Agent",
+    "description": "AI",
+    "role": "Team Project",
+    "group": "UVic",
+    "links": [
+      {
+        "icon": "github",
+        "url": "https://github.com/chunthebear/deep-q-learning-Minesweeper"
+      },
+      {
+        "icon": "report",
+        "url": "https://www.overleaf.com/project/6063fe74b8f71c697c077148/https://raw.githubusercontent.com/chunthebear/"
+      }
+    ],
+    "year": "2021"
+  },
+  {
+    "key": "lpsolver",
+    "title": "Linear Program Solver",
+    "role": "Course Project",
+    "group": "UVic",
+    "description": "Linear optimization algorithm using a matrix algebraic version of the Simplex Method, detect infeasibility/unboundedness, also: initially infeasible problems. Latex some linalg matrix shit for this. Draw some square with arrows for logo.",
+    "links": [{
+      "icon": "github",
+      "url": "https://github.com/zakwht/simplex"
+    }],
+    "year": "2021"
+  }
+]

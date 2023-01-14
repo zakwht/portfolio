@@ -1,0 +1,80 @@
+[
+  {
+    "title": "Experience",
+    "items": [
+      {
+        "title": "Regroove Solutions",
+        "subtitle": "Web Applications Developer",
+        "date": "Jan 2020 - present",
+        "items": [
+          "Mention some tools I use, client projects, SPFX, marketing tasks, yada yada",
+          "ESW* if there is a microsoft article...",
+          "Definitely mention Navo, its multiplatform, api /front /backend/automated testing",
+          "Microsoft partner"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Education",
+    "items": [
+      {
+        "title": "BSc. Computer Science",
+        "subtitle": "University of Victoria",
+        "date": "Sept 2017 - present",
+        "items": [
+          "Honours, co-op program",
+          "Software Engineering Option",
+          "Electives include statistics and data analysis courses",
+          "Expected graduation: 2022"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Projects",
+    "items": [
+      {
+        "title": "APOD Browser Extension",
+        "subtitle": "Chrome extension that showcases NASA's Astronomy Picture of the Day",
+        "date": "Nov 2020",
+        "items": [
+          "Built with TypeScript using React",
+          "Leverages the NASA APOD open API",
+          "Created as a personal introduction to extension development"
+        ]
+      },
+      {
+        "title": "Universal Search",
+        "subtitle": "Universal search SharePoint web part",
+        "date": "July - Oct 2020",
+        "items": [
+          "Built using the SharePoint Framework (SPFx)",
+          "Designed for integration with Microsoft Teams and SharePoint"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Skills",
+    "items": [
+      {
+        "title": "Languages & Frameworks",
+        "items": [
+          "JavaScript, TypeScript, HTML, CSS, Sass",
+          "C, Java, Python, R, Latex",
+          "React, Angular",
+          "SPFx, Bot Framework"
+        ]
+      },
+      {
+        "title": "Dev Tools",
+        "items": ["Git, GitHub, DevOps", "Microsoft Azure", "NodeJS, NPM"]
+      },
+      {
+        "title": "Technical Services",
+        "items": ["Microsoft 365"]
+      }
+    ]
+  }
+]
