@@ -3,14 +3,11 @@
     "title": "Experience",
     "items": [
       {
-        "title": "Regroove Solutions",
-        "subtitle": "Web Applications Developer",
-        "date": "Jan 2020 - present",
+        "title": "a",
+        "subtitle": "b",
+        "date": "c",
         "items": [
-          "Mention some tools I use, client projects, SPFX, marketing tasks, yada yada",
-          "ESW* if there is a microsoft article...",
-          "Definitely mention Navo, its multiplatform, api /front /backend/automated testing",
-          "Microsoft partner"
+          "d", "e"
         ]
       }
     ]

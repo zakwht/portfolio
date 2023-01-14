@@ -18,16 +18,13 @@ export const AboutRoute: React.FC = () => (
       <p>
         Hi <span style={{color: "transparent", textShadow: "0 0 0 mediumseagreen"}}>👋</span> I'm Zak, a software developer based in Victoria, BC.</p>
       <p>
-        I'm a fourth-year student at the University of Victoria, pursuing a bachelor's degree in computer science with a minor in statistics.
+        I'm a 2022 University of Victoria grad, having earned an honours bachelor's degree in computer science with a minor in statistics.
         Of big interest to me are the fields at the intersection of these two disciplines: data science, machine learning, analysis of algorithms.
         My other academic interests include machine ethics, graph theory, and optimization algorithms.
       </p>
       <p>
         Most of my development experience involves building web applications with React &amp; TypeScript, with a focus on encompassing the Semantic Web.
         I've worked within the scope of many programming paradigms, using languages including Java, Python, Racket, and R.
-      </p>
-      <p>
-        Currently, I'm working as an Applications Developer at Regroove Solutions, a cloud services consulting firm in Brentwood Bay, BC.
       </p>
     </AboutStyled>
   </>

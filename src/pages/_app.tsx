@@ -135,7 +135,6 @@ export const App: React.FC<AppProps> = ({Component, pageProps}) =>
       <NavStyled>
         <Link href="/projects">Projects</Link>
         <Link href="/about">About</Link>
-        <Link href="/resume">Resume</Link>
       </NavStyled>
     </HeaderStyled>
     <MainStyled>
