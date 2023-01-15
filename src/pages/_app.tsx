@@ -131,6 +131,10 @@ const FooterLinksStyled = styled.nav`
 const MainStyled = styled.main`
   padding-bottom: 80px;
   margin: 32px 24px 0;
+
+  @media only screen and (max-width: 480px) {
+    padding-bottom: 120px;
+  }
 `
 
 //move header and footer to components.
