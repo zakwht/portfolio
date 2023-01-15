@@ -72,6 +72,12 @@ const FooterStyled = styled.footer`
     bottom: 16px;
     right: 24px;
     color: white;
+
+    @media only screen and (max-width: 480px) {
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
   }
 `
 
@@ -82,7 +88,10 @@ const FooterLinksStyled = styled.nav`
   left: 0;
   display: flex;
   justify-content: center;
-  display: flex;
+
+  @media only screen and (max-width: 480px) {
+    bottom: 32px;
+  }
 
   a {
     color: white;
@@ -149,8 +158,8 @@ export const App: React.FC<AppProps> = ({Component, pageProps}) =>
       ><a href="mailto:zakwht@gmail.com" data-link="Mail">
         <FaEnvelope />
       </a>
-      <span>© {new Date().getFullYear()}</span>
       </FooterLinksStyled>
+      <span>© {new Date().getFullYear()}</span>
     </FooterStyled>
   </>
 
