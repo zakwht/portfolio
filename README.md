@@ -1,9 +1,9 @@
 # Portfolio
 
-<!-- some badges -->
+[![Status](https://img.shields.io/website?down_message=down&label=site&up_message=published&url=https%3A%2F%2Fzakwhite.ca)](https://zakwhite.ca)
+[![License](https://img.shields.io/github/license/zakwht/portfolio)](/LICENSE.md)
 
-This was made with NextJS, (react, emotion styled components), and hosted using GH pages! Some information about me and some of the projects I've worked on!
-
+My personal portfolio with some information about me and the projects I've worked on. Built with NextJS and hosted using GitHub Pages.
 
 ### Development
 
