@@ -155,5 +155,39 @@
       "url": "https://github.com/zakwht/sars-cov-2"
     }],
     "year": "2022"
+  },
+  {
+    "key": "linguist",
+    "title": "Linguist Language Visualizer",
+    "role": "Personal Project",
+    "description": "A VueJS web app that summarizes the list of languages recognized by GitHub's Linguist.",
+    "links": [
+      {
+        "icon": "github",
+        "url": "https://github.com/zakwht/linguist"
+      },
+      {
+        "icon": "website",
+        "url": "https://zakwht.github.io/linguist/"
+      }
+    ],
+    "year": "2023"
+  },
+  {
+    "key": "goodreads",
+    "title": "Goodreads Currently Reading API",
+    "role": "Personal Project",
+    "description": "A REST API that returns information about the book a Goodreads user is currently reading, in JSON or SVG. Powered by Express, Nunjucks, and Vercel.",
+    "links": [
+      {
+        "icon": "github",
+        "url": "https://github.com/zakwht/goodreads"
+      },
+      {
+        "icon": "website",
+        "url": "https://goodreads-six.vercel.app/"
+      }
+    ],
+    "year": "2023"
   }
 ]
