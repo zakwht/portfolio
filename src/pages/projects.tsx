@@ -21,7 +21,7 @@ export const HomeRoute = ({ projects }: { projects: Project[] }) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => ({
-  props: { projects }
+  props: { projects: projects.sort(() => Math.random() - 0.5) }
 });
 
 export default HomeRoute;
