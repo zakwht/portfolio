@@ -1,74 +1,5 @@
-/* html {
-  overflow-x: hidden;
-}
-
-.line {
-  position: absolute;
-  height: 100%;
-  border-left: 1px dotted #bbb;
-}
-
-.line.strong {
-  border-color: black;
-}
-
-.line.strong::before {
-  content: attr(data-title);
-  position: absolute;
-  bottom: 0;
-  text-orientation: sideways;
-  writing-mode: vertical-lr;
-}
-
-.abc {
-  background-color: #bbb;
-  list-style: none;
-  padding: 4px;
-  margin: 4px 0;
-  min-width: fit-content;
-}
-
-.abc div {
-  width: 4px;
-  height: 100%;
-  position: absolute;
-  left: -4px;
-  margin: -4px 0px;
-  border-radius: 4px 0px 0px 4px;
-}
-
-ol {
-  display: flex;
-}
-
-ul, ol {
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  margin: 0 20px;
-  background-color: white;
-  width: fit-content;
-  position: relative;
-}
-
-.__react_component_tooltip.show {
-  padding: 16px;
-}
-
-.__react_component_tooltip h3 {
-  margin: 0px;
-}
-
-.__react_component_tooltip h4 {
-  margin: 2px 0px;
-} */
-
-/* across all */
 html {
   overflow-x: hidden;
-  /* temporary */
   background-color: #33363F; /* #424A55; */
 }
 
@@ -81,6 +12,3 @@ body {
   min-height: 100vh;
 }
 
-/* main {
-  padding-bottom: 80px;
-} */
