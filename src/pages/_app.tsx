@@ -1,10 +1,10 @@
-
-import type { AppProps} from 'next/app'
-import Link from 'next/link';
+import type { AppProps } from "next/app";
+import Link from "next/link";
 import styled from "@emotion/styled";
-import '../App.css';
-import {Helmet} from "../components/Helmet";
-import {FaGithub, FaLinkedin, FaEnvelope} from "react-icons/fa";
+import "../App.css";
+import { Helmet } from "../components/Helmet";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import projects from "../../content/projects.json";
 
 /* for active page link highlight:
   left: -4px;
@@ -36,13 +36,13 @@ const HeaderStyled = styled.header`
   a {
     color: inherit;
     text-decoration: none;
-    
+
     &:hover {
       transition: all 0.5s;
       filter: brightness(0.8);
     }
   }
-`
+`;
 
 const NavStyled = styled.nav`
   position: absolute;
@@ -60,7 +60,7 @@ const NavStyled = styled.nav`
     margin-left: 28px;
     font-size: 1.1rem;
   }
-`
+`;
 
 const FooterStyled = styled.footer`
   svg {
@@ -79,7 +79,7 @@ const FooterStyled = styled.footer`
       text-align: center;
     }
   }
-`
+`;
 
 const FooterLinksStyled = styled.nav`
   position: absolute;
@@ -126,7 +126,7 @@ const FooterLinksStyled = styled.nav`
       }
     }
   }
-`
+`;
 
 const MainStyled = styled.main`
   padding-bottom: 80px;
@@ -135,16 +135,28 @@ const MainStyled = styled.main`
   @media only screen and (max-width: 480px) {
     padding-bottom: 120px;
   }
-`
+`;
 
 //move header and footer to components.
 
-
-export const App: React.FC<AppProps> = ({Component, pageProps}) => 
+export const App: React.FC<AppProps> = ({ Component, pageProps }) => (
   <>
-    <Helmet title="Portfolio" />
+    <Helmet title="Portfolio">
+      <>
+        {projects.map((p) => (
+          <link
+            key={p.key}
+            rel="preload"
+            href={`img/projects/${p.key}.png`}
+            as="image"
+          />
+        ))}
+      </>
+    </Helmet>
     <HeaderStyled>
-      <h1><Link href="/">Zak White</Link></h1>
+      <h1>
+        <Link href="/">Zak White</Link>
+      </h1>
       <NavStyled>
         <Link href="/projects">Projects</Link>
         <Link href="/about">About</Link>
@@ -155,16 +167,19 @@ export const App: React.FC<AppProps> = ({Component, pageProps}) =>
     </MainStyled>
     <FooterStyled>
       <FooterLinksStyled>
-      <a href="https://github.com/zakwht" data-link="GitHub"
-        ><FaGithub /></a
-      ><a href="https://linkedin.com/in/zakwhite" data-link="LinkedIn"
-        ><FaLinkedin /></a
-      ><a href="mailto:zakwht@gmail.com" data-link="Mail">
-        <FaEnvelope />
-      </a>
+        <a href="https://github.com/zakwht" data-link="GitHub">
+          <FaGithub />
+        </a>
+        <a href="https://linkedin.com/in/zakwhite" data-link="LinkedIn">
+          <FaLinkedin />
+        </a>
+        <a href="mailto:zakwht@gmail.com" data-link="Mail">
+          <FaEnvelope />
+        </a>
       </FooterLinksStyled>
       <span>© {new Date().getFullYear()}</span>
     </FooterStyled>
   </>
+);
 
 export default App;

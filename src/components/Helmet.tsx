@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-export const Helmet: React.FC<{ title?: string, children?: React.ReactChildren }> = ({
+export const Helmet: React.FC<{ title?: string, children?: React.ReactElement }> = ({
   title,
   children
 }) => (
