@@ -1,4 +1,4 @@
-import type { AppProps } from "next/app";
+import NextApp, { AppContext, AppProps } from "next/app";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import "../App.css";
@@ -139,7 +139,7 @@ const MainStyled = styled.main`
 
 //move header and footer to components.
 
-export const App: React.FC<AppProps> = ({ Component, pageProps }) => (
+export const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Helmet title="Portfolio">
       <>
@@ -181,5 +181,14 @@ export const App: React.FC<AppProps> = ({ Component, pageProps }) => (
     </FooterStyled>
   </>
 );
+
+App.getInitialProps = async (appContext: AppContext) => {
+  const appProps = await NextApp.getInitialProps(appContext);
+
+  if (appContext.ctx.res?.statusCode === 404)
+    appContext.ctx.res.writeHead(302, { Location: "/" }).end();
+
+  return appProps;
+};
 
 export default App;
