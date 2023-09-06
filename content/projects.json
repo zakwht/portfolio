@@ -41,10 +41,6 @@
     "description": "A browser extension that showcases NASA's Astronomy Photo of the Day! The app is built using TypeScript and React and leverages NASA's open API for photos.",
     "links": [
       {
-        "icon": "chrome",
-        "url": "chrome://extensions"
-      },
-      {
         "icon": "github",
         "url": "https://github.com/zakwht/apod"
       }
@@ -59,7 +55,7 @@
     "links": [
       {
         "icon": "chrome",
-        "url": "chrome://extensions"
+        "url": "https://chrome.google.com/webstore/detail/studio-ghibli-new-tab/fmdejajfcfdnbbanalgjibhcgbhihphd"
       },
       {
         "icon": "github",
