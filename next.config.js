@@ -8,5 +8,13 @@ module.exports = {
         permanent: true,
       },
     ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/resume.pdf',
+        destination: '/api/resume',
+      },
+    ]
   }
 }
