@@ -1,4 +1,4 @@
-import NextApp, { AppContext, AppProps } from "next/app";
+import { AppProps } from "next/app";
 import Link from "next/link";
 import styled from "@emotion/styled";
 import "../App.css";
@@ -170,9 +170,9 @@ export const App = ({ Component, pageProps }: AppProps) => (
         <a href="https://github.com/zakwht" data-link="GitHub">
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/in/zakwhite" data-link="LinkedIn">
+        {/* <a href="https://linkedin.com/in/zakwhite" data-link="LinkedIn">
           <FaLinkedin />
-        </a>
+        </a> */}
         <a href="mailto:zakwht@gmail.com" data-link="Mail">
           <FaEnvelope />
         </a>
@@ -181,14 +181,5 @@ export const App = ({ Component, pageProps }: AppProps) => (
     </FooterStyled>
   </>
 );
-
-App.getInitialProps = async (appContext: AppContext) => {
-  const appProps = await NextApp.getInitialProps(appContext);
-
-  if (appContext.ctx.res?.statusCode === 404)
-    appContext.ctx.res.writeHead(302, { Location: "/" }).end();
-
-  return appProps;
-};
 
 export default App;
