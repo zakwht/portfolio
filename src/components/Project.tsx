@@ -109,6 +109,7 @@ export interface Project {
   year?: string;
 }
 
+// TODO: this is a list
 export const ProjectSummary: React.FC<Project> = ({ key, title, role, group, description, links = [], year, ...props }) => (
   <ProjectCard key={key} id={key}>
     <img src={`img/projects/${key}.png`} alt={title} draggable={false} />
@@ -126,7 +127,6 @@ export const ProjectSummary: React.FC<Project> = ({ key, title, role, group, des
       {links.map(l => (
         <a key={l.url} href={l.url} target="_blank" rel="noreferrer"><ProjectIcon type={l.icon} /></a>
       ))}
-      {!!year && <time>{year}</time>}
       </div>
     </ProjectText>
   </ProjectCard>

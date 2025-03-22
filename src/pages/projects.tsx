@@ -13,9 +13,8 @@ const ProjectsLayout = styled.section`
   // margin: 20px;
 `;
 
-export const HomeRoute = ({ projects }: { projects: Project[] }) => (
+export const ProjectRoute = ({ projects }: { projects: Project[] }) => (
   <>
-    <Helmet title="Projects" />
     <ProjectsLayout>{projects.map(ProjectSummary)}</ProjectsLayout>
   </>
 );
@@ -24,4 +23,4 @@ export const getStaticProps: GetStaticProps = async () => ({
   props: { projects: projects.sort(() => Math.random() - 0.5) }
 });
 
-export default HomeRoute;
+export default ProjectRoute;

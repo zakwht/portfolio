@@ -7,6 +7,7 @@ const FrameStyled = styled.iframe`
   border: none;
   height: 100vh;
   width: 100vw;
+  z-index: 10;
 `;
 
 export const Frame: React.FC<{ title?: string; src?: string }> = ({
