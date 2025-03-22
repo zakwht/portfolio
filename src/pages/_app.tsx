@@ -88,6 +88,7 @@ const FooterLinksStyled = styled.nav`
   left: 0;
   display: flex;
   justify-content: center;
+  z-index: -1;
 
   @media only screen and (max-width: 480px) {
     bottom: 32px;
