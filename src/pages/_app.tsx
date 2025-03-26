@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import styled from "@emotion/styled";
 import "../App.css";
-import { FaGithub, FaMicrosoft, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 const HeaderStyled = styled.header`
   color: white;
@@ -111,7 +111,7 @@ export const App = ({ Component, pageProps }: AppProps) => (
           <FaGithub />
         </a>
         <a href="https://linkedin.com/in/zakwhite" data-link="LinkedIn">
-          <FaMicrosoft />
+          <FaLinkedin />
         </a>
         <a href="mailto:zakwht@gmail.com" data-link="Mail">
           <FaEnvelope />

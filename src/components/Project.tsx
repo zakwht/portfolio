@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { FaMicrosoft } from "react-icons/fa";
 
 const ProjectCard = styled.article`
   break-inside: avoid;
@@ -65,13 +66,13 @@ const Stack = styled.ul`
   padding: 0;
   margin: 0;
   gap: 16px;
-`
+`;
 
-const Technology = styled.li`
+export const Technology = styled.li`
   display: flex;
   align-items: center;
   gap: 4px;
-`
+`;
 
 export interface Project {
   key: string;
@@ -84,27 +85,26 @@ export interface Project {
   stack: string[];
 }
 
+export const StackIcon = ({ tool }: { tool: string }) => {
+  if (["spfx", "bot framework", "azure"].includes(tool.toLowerCase()))
+    return <FaMicrosoft color="f14f21" />;
+  return (
+    <img width="14px" src={`https://cdn.simpleicons.org/${iconSlug(tool)}`} />
+  );
+};
+
 const iconSlug = (tool: string) => {
-
   switch (tool.toLowerCase()) {
-    case "vue.js":
-      return "vuedotjs"
     case "graph api":
-      return "graphql"
-    case "spfx":
-    case "bot framework":
-    case "azure":
-      return "makerbot"
+      return "graphql";
     case "sklearn":
-      return "scipy"
+      return "scipy";
     case "pymol":
-      return "moleculer"
+      return "moleculer";
     default:
-      return tool.toLowerCase();
+      return tool.replace(".", "dot").toLowerCase();
   }
-}
-
-
+};
 
 // TODO: this is a list
 export const ProjectSummary: React.FC<Project> = ({
@@ -139,13 +139,10 @@ export const ProjectSummary: React.FC<Project> = ({
       <h3>{title}</h3>
       <p>{description}</p>
       <Stack>
-        {stack.map((l) => (
-          <Technology key={l}>
-          <img 
-            width="14px"
-            src={`https://cdn.simpleicons.org/${iconSlug(l)}`} 
-          />
-          <span>{l}</span>
+        {stack.map((tool) => (
+          <Technology key={tool}>
+            <StackIcon tool={tool} />
+            <span>{tool}</span>
           </Technology>
         ))}
       </Stack>

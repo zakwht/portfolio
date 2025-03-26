@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Helmet } from "../components/Helmet";
+import { StackIcon, Technology } from "../components/Project";
 
 const AboutStyled = styled.section`
   color: #eee;
@@ -21,16 +22,42 @@ const AboutStyled = styled.section`
   }
 `;
 
+const Stack = styled.ul`
+  padding-left: 64px;
+  column-count: 4;
+`;
+
+const tools = [
+  "JavaScript",
+  "TypeScript",
+  "Python",
+  "PostgreSQL",
+  "React",
+  "Next.js",
+  "Vue.js",
+  "Svelte",
+  "Hugo",
+  "Node.js",
+  "Firebase",
+  "Express"
+];
+
 export const AboutRoute: React.FC = () => (
   <>
     <Helmet title="About" />
     <AboutStyled>
       <p>
-        Canadian full-stack software developer.
+        Canadian full-stack software developer with a passion for developing
+        high-quality web solutions.
       </p>
-      <p>
-        Stack
-      </p>
+      <Stack>
+        {tools.map((tool) => (
+          <Technology key={tool}>
+            <StackIcon tool={tool} />
+            <span>{tool}</span>
+          </Technology>
+        ))}
+      </Stack>
     </AboutStyled>
   </>
 );
