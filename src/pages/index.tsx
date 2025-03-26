@@ -1,6 +1,6 @@
 import React from "react";
-import AboutRoute from "./about";
-import ProjectRoute from "./projects";
+import AboutRoute from "../components/AboutSection";
+import ProjectRoute from "../components/ProjectsSection";
 import { GetStaticProps } from "next";
 import projects from "../../content/projects.json";
 import { Project } from "../components/Project";

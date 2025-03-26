@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import { Helmet } from "../components/Helmet";
-import { Project, ProjectSummary } from "../components/Project";
+import { Helmet } from "./Helmet";
+import { Project, ProjectSummary } from "./Project";
 import { GetStaticProps } from "next";
 import projects from "../../content/projects.json";
 

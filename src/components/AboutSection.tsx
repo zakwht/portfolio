@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Helmet } from "../components/Helmet";
-import { StackIcon, Technology } from "../components/Project";
+import { Helmet } from "./Helmet";
+import { StackIcon, Technology } from "./Project";
 
 const AboutStyled = styled.section`
   color: #eee;
