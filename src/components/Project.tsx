@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { FaFileInvoice, FaGithub, FaReadme, FaChrome, FaNpm, FaStore, FaLink} from "react-icons/fa"
+import { FaMicrosoft } from "react-icons/fa";
 
 const ProjectCard = styled.article`
   break-inside: avoid;
@@ -14,12 +14,13 @@ const ProjectCard = styled.article`
   &:hover {
     box-shadow: 0 0 6px 4px rgb(0 0 0 / 8%);
 
-    > img {
+    > a img {
       transform: scale(1.05);
     }
   }
 
-  > img {
+  > img,
+  > a img {
     transition: transform 0.5s;
     filter: brightness(0.95);
     width: 100%;
@@ -29,7 +30,7 @@ const ProjectCard = styled.article`
   img {
     user-select: none;
   }
-`
+`;
 
 const ProjectText = styled.span`
   display: block;
@@ -38,31 +39,7 @@ const ProjectText = styled.span`
   h3 {
     margin-block: 0;
   }
-
-  a {
-    margin-right: 12px;
-    font-size: 18px;
-    color: inherit;
-  }
-
-  time {
-    float: right;
-    font-weight: 200;
-  }
-
-  .role {
-    margin-right: 0.3rem;
-  }
-
-  .group {
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
-
-  div {
-    min-height: 22px;
-  }
-`
+`;
 
 const ProjectLogo = styled.div`
   margin-top: -56px;
@@ -82,22 +59,20 @@ const ProjectLogo = styled.div`
       width: 64px;
     }
   }
-`
+`;
 
-type IconType = "github" | "website" | "chrome" | "blog" | "npm" | "store" | "report";
+const Stack = styled.ul`
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+`;
 
-const ProjectIcon: React.FC<{type: IconType}> = ({type}) => {
-  switch(type) {
-    case "github": return <FaGithub />
-    case "chrome": return <FaChrome />
-    case "npm": return <FaNpm style={{transform: "scale(1.5)", margin: "0 0.2rem 0 0.3rem"}} />
-    case "blog": return <FaReadme />
-    case "website": return <FaLink />;
-    case "store": return <FaStore />
-    case "report": return <FaFileInvoice />
-  }
-}
-
+export const Technology = styled.li`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+`;
 
 export interface Project {
   key: string;
@@ -105,29 +80,72 @@ export interface Project {
   role?: string;
   group?: string;
   description: string;
-  links?: {icon: IconType; url: string}[];
+  url?: string;
   year?: string;
+  stack: string[];
 }
 
-export const ProjectSummary: React.FC<Project> = ({ key, title, role, group, description, links = [], year, ...props }) => (
+export const StackIcon = ({ tool }: { tool: string }) => {
+  if (["spfx", "bot framework", "azure"].includes(tool.toLowerCase()))
+    return <FaMicrosoft color="f14f21" />;
+  return (
+    <img width="14px" src={`https://cdn.simpleicons.org/${iconSlug(tool)}`} />
+  );
+};
+
+const iconSlug = (tool: string) => {
+  switch (tool.toLowerCase()) {
+    case "graph api":
+      return "graphql";
+    case "sklearn":
+      return "scipy";
+    case "pymol":
+      return "moleculer";
+    default:
+      return tool.replace(".", "dot").toLowerCase();
+  }
+};
+
+// TODO: this is a list
+export const ProjectSummary: React.FC<Project> = ({
+  key,
+  title,
+  role,
+  group,
+  description,
+  url,
+  year,
+  stack,
+  ...props
+}) => (
   <ProjectCard key={key} id={key}>
-    <img src={`img/projects/${key}.png`} alt={title} draggable={false} />
+    {url ? (
+      <a href={url} target="__blank">
+        <img src={`img/projects/${key}.png`} alt={title} draggable={false} />
+      </a>
+    ) : (
+      <img src={`img/projects/${key}.png`} alt={title} draggable={false} />
+    )}
     <ProjectLogo>
       <figure>
-        <img src={`img/projects/${key}-logo.png`} alt={title} draggable={false} />
+        <img
+          src={`img/projects/${key}-logo.png`}
+          alt={title}
+          draggable={false}
+        />
       </figure>
     </ProjectLogo>
     <ProjectText {...props}>
       <h3>{title}</h3>
-      {!!role && <span className="role">{role}</span>}
-      {!!group && <span className="group">({group})</span>}
       <p>{description}</p>
-      <div>
-      {links.map(l => (
-        <a key={l.url} href={l.url} target="_blank" rel="noreferrer"><ProjectIcon type={l.icon} /></a>
-      ))}
-      {!!year && <time>{year}</time>}
-      </div>
+      <Stack>
+        {stack.map((tool) => (
+          <Technology key={tool}>
+            <StackIcon tool={tool} />
+            <span>{tool}</span>
+          </Technology>
+        ))}
+      </Stack>
     </ProjectText>
   </ProjectCard>
 );

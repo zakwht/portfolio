@@ -1,21 +1,7 @@
 import { AppProps } from "next/app";
-import Link from "next/link";
 import styled from "@emotion/styled";
 import "../App.css";
-import { Helmet } from "../components/Helmet";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import projects from "../../content/projects.json";
-
-/* for active page link highlight:
-  left: -4px;
-  content: '';
-  width: calc(100% + 8px);
-  height: 2px;
-  background-color: white;
-  position: absolute;
-  bottom: -4px;
-  border-radius: 8px;
-*/
+import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
 
 const HeaderStyled = styled.header`
   color: white;
@@ -31,34 +17,8 @@ const HeaderStyled = styled.header`
   h1 {
     margin-block: 0;
     font-weight: 200;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover {
-      transition: all 0.5s;
-      filter: brightness(0.8);
-    }
-  }
-`;
-
-const NavStyled = styled.nav`
-  position: absolute;
-  right: 48px;
-  bottom: 20px;
-
-  @media only screen and (max-width: 480px) {
-    left: 0;
-    top: 64px;
-  }
-
-  a {
-    float: bottom;
-    line-height: 1.5;
-    margin-left: 28px;
-    font-size: 1.1rem;
+    position: absolute;
+    right: 48px;
   }
 `;
 
@@ -88,7 +48,6 @@ const FooterLinksStyled = styled.nav`
   left: 0;
   display: flex;
   justify-content: center;
-  z-index: -1;
 
   @media only screen and (max-width: 480px) {
     bottom: 32px;
@@ -138,30 +97,10 @@ const MainStyled = styled.main`
   }
 `;
 
-//move header and footer to components.
-
 export const App = ({ Component, pageProps }: AppProps) => (
   <>
-    <Helmet title="Portfolio">
-      <>
-        {projects.map((p) => (
-          <link
-            key={p.key}
-            rel="preload"
-            href={`img/projects/${p.key}.png`}
-            as="image"
-          />
-        ))}
-      </>
-    </Helmet>
     <HeaderStyled>
-      <h1>
-        <Link href="/">Zak White</Link>
-      </h1>
-      <NavStyled>
-        <Link href="/projects">Projects</Link>
-        <Link href="/about">About</Link>
-      </NavStyled>
+      <h1>Zak White</h1>
     </HeaderStyled>
     <MainStyled>
       <Component {...pageProps} />
@@ -171,9 +110,9 @@ export const App = ({ Component, pageProps }: AppProps) => (
         <a href="https://github.com/zakwht" data-link="GitHub">
           <FaGithub />
         </a>
-        {/* <a href="https://linkedin.com/in/zakwhite" data-link="LinkedIn">
+        <a href="https://linkedin.com/in/zakwhite" data-link="LinkedIn">
           <FaLinkedin />
-        </a> */}
+        </a>
         <a href="mailto:zakwht@gmail.com" data-link="Mail">
           <FaEnvelope />
         </a>
