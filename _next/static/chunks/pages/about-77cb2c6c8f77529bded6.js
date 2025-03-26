@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[10],{hIud:function(_,n,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about",function(){return w("2l/u")}])}},[["hIud",0,1,3,2,5]]]);
