@@ -25,6 +25,11 @@ const AboutStyled = styled.section`
 const Stack = styled.ul`
   padding-left: 64px;
   column-count: 4;
+
+  @media only screen and (max-width: 480px) {
+    padding-left: 40px;
+    column-count: 2;
+  }
 `;
 
 const tools = [
