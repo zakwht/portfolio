@@ -30,6 +30,12 @@ const ProjectCard = styled.article`
   img {
     user-select: none;
   }
+
+  @media only screen and (max-width: 480px) {
+    li span {
+      display: none;
+    }
+  }
 `;
 
 const ProjectText = styled.span`
