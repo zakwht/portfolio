@@ -11,6 +11,27 @@ const AboutStyled = styled.section`
   line-height: 1.5;
   letter-spacing: 0.02rem;
 
+  > img {
+    width: 108vw;
+    margin-left: -98px;
+    height: 320px;
+    object-fit: cover;
+    object-position: bottom;
+
+    @media only screen and (max-width: 480px) {
+      margin-left: -32px;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-left: -12px;
+
+    @media only screen and (max-width: 480px) {
+      margin-left: 0;
+    }
+  }
+
   a {
     color: mediumseagreen;
     text-decoration: none;
@@ -51,6 +72,7 @@ export const AboutRoute: React.FC = () => (
   <>
     <Helmet title="About" />
     <AboutStyled>
+      <img alt="Birdwatching" draggable="false" src="/img/birdwatching.jpeg" />
       <p>
         Canadian full-stack software developer with a passion for developing
         high-quality web solutions.
