@@ -12,7 +12,7 @@ const AboutStyled = styled.section`
   letter-spacing: 0.02rem;
 
   > img {
-    width: 108vw;
+    width: 100vw;
     margin-left: calc(-50vw + 50%);
     max-height: 320px;
     object-fit: cover;
