@@ -65,7 +65,7 @@ const tools = [
 
 export const AboutRoute: React.FC = () => (
   <>
-    <Helmet title="About" />
+    <Helmet />
     <AboutStyled>
       <img alt="Birdwatching" draggable="false" src="/img/birdwatching.jpeg" />
       <p>
