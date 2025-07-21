@@ -121,5 +121,14 @@
     "url": "https://github.com/zakwht/goodreads",
     "year": "2023",
     "stack": ["JavaScript", "Express", "Nunjucks"]
+  },
+  {
+    "key": "grays",
+    "title": "Grays Cafe Website",
+    "role": "Primary Developer",
+    "description": "A static website built using Astro and Vercel. Integrated with Google Business API & strategically configured for SEO.",
+    "year": "2025",
+    "stack": ["TypeScript", "Astro", "CSS"],
+    "url": "https://grayscafe.ca"
   }
 ]
