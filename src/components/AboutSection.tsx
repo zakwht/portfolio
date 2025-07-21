@@ -13,14 +13,9 @@ const AboutStyled = styled.section`
 
   > img {
     width: 108vw;
-    margin-left: -98px;
-    height: 320px;
+    margin-left: calc(-50vw + 50%);
+    max-height: 320px;
     object-fit: cover;
-    object-position: bottom;
-
-    @media only screen and (max-width: 480px) {
-      margin-left: -32px;
-    }
   }
 
   p {
