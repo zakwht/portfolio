@@ -14,6 +14,7 @@ const AboutStyled = styled.section`
   > img {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
+    height: 320px;
     max-height: 320px;
     object-fit: cover;
   }
