@@ -1,42 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { FaMicrosoft } from "react-icons/fa";
-
-const ProjectCard = styled.article`
-  break-inside: avoid;
-  background-color: white; // thistle;
-  border-radius: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  box-shadow: 0px 6px 10px 0 hsl(210deg 23% 48% / 10%);
-  overflow: hidden;
-
-  &:hover {
-    box-shadow: 0 0 6px 4px rgb(0 0 0 / 8%);
-
-    > a img {
-      transform: scale(1.05);
-    }
-  }
-
-  > img,
-  > a img {
-    transition: transform 0.5s;
-    filter: brightness(0.95);
-    width: 100%;
-    vertical-align: top;
-  }
-
-  img {
-    user-select: none;
-  }
-
-  @media only screen and (max-width: 480px) {
-    li span {
-      display: none;
-    }
-  }
-`;
+import { Card } from "./Card";
 
 const ProjectText = styled.span`
   display: block;
@@ -95,7 +60,7 @@ export const StackIcon = ({ tool }: { tool: string }) => {
   if (["spfx", "bot framework", "azure"].includes(tool.toLowerCase()))
     return <FaMicrosoft color="f14f21" />;
   return (
-    <img width="14px" src={`https://cdn.simpleicons.org/${iconSlug(tool)}`} />
+    <img width="14px" alt={tool} src={`https://cdn.simpleicons.org/${iconSlug(tool)}`} />
   );
 };
 
@@ -107,6 +72,31 @@ const iconSlug = (tool: string) => {
       return "scipy";
     case "pymol":
       return "moleculer";
+    case "bash":
+      return "gnubash";
+    case "sql":
+      return "postgresql";
+    case "data analysis":
+      return "simpleanalytics";
+    case "data modeling":
+      return "openjsfoundation";
+    case "version control":
+      return "git";
+    case "research methods":
+      return "egghead";
+    case "machine learning":
+      return "cryptomator";
+    case "experimental design":
+      return "neutralinojs";
+    case "technical writing":
+      return "libreofficebase";
+    case "statistics":
+      return "weightsandbiases";
+    case "info viz":
+      return "anaconda";
+    case "collaboration":
+      return "harbor";
+    case "pipelines/etl": return "spine"
     default:
       return tool.replace(".", "dot").toLowerCase();
   }
@@ -124,7 +114,7 @@ export const ProjectSummary: React.FC<Project> = ({
   stack,
   ...props
 }) => (
-  <ProjectCard key={key} id={key}>
+  <Card key={key} id={key}>
     {url ? (
       <a href={url} target="__blank">
         <img src={`img/projects/${key}.png`} alt={title} draggable={false} />
@@ -153,5 +143,5 @@ export const ProjectSummary: React.FC<Project> = ({
         ))}
       </Stack>
     </ProjectText>
-  </ProjectCard>
+  </Card>
 );

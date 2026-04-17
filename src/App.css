@@ -10,5 +10,21 @@ body {
   position: relative;
   margin: 0;
   min-height: 100vh;
+  color: #eee;
+  font-weight: 300;
 }
 
+section {
+  position: relative;
+  max-width: 880px;
+  margin: 32px auto;
+}
+
+section::before {
+  content: attr(id);
+  position: absolute;
+  right: calc(100% + 32px);
+  text-transform: uppercase;
+  font-weight: 100;
+  color: #eee;
+}

@@ -14,11 +14,15 @@ const HeaderStyled = styled.header`
     padding: 20px 28px;
   }
 
-  h1 {
+  h1, h3 {
     margin-block: 0;
     font-weight: 200;
     position: absolute;
     right: 48px;
+  }
+
+  h3 {
+    top: 88px;
   }
 `;
 
@@ -101,6 +105,7 @@ export const App = ({ Component, pageProps }: AppProps) => (
   <>
     <HeaderStyled>
       <h1>Zak White</h1>
+      <h3>Data Analyst</h3>
     </HeaderStyled>
     <MainStyled>
       <Component {...pageProps} />
