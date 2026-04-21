@@ -74,6 +74,9 @@ export const AboutSection: React.FC = () => (
           <li>5+ years professional experience in software development</li>
           <li>Currently working in Data Analysis for a BC Crown Corporation</li>
         </ul>
+        <p>
+          Please read about my interests, skills & projects below, or review <a href="/resume.pdf">my resume</a> or <a href="/github">GitHub dashboard</a>.
+        </p>
       </section>
     </AboutStyled>
   </>
