@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { skills } from "./Biography";
+import skills from "../../content/skills.json";
 import { StackIcon } from "./Stack";
 
 export const Skills = styled.ul`

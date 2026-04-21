@@ -67,11 +67,14 @@ section > p:first-of-type {
     margin-top: 0;
 }
 
+section#ideas, section#projects {
+  margin-bottom: 16px;
+}
+
 .two-col {
   column-width: 320px;
   column-count: 2;
   column-fill: balance;
-  margin-bottom: 16px;
 
   p {
     break-inside: avoid;

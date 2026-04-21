@@ -94,7 +94,7 @@ export const App = ({ Component, pageProps }: AppProps) => (
   <>
     <Head>
       <script type="application/ld+json">
-      {`{
+        {`{
         "@context": "http://schema.org",
         "@type": "Person",
         "@id": "https://zakwhite.ca",
@@ -116,11 +116,11 @@ export const App = ({ Component, pageProps }: AppProps) => (
           "https://ebird.org/profile/NTk3MjU4OQ"
         ]
       }`}
-    </script>
+      </script>
     </Head>
     <HeaderStyled>
       <h1>Zak White</h1>
-      <h3>Data Analyst</h3>
+      <h3>Computer Scientist</h3>
     </HeaderStyled>
     <main>
       <Component {...pageProps} />

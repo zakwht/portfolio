@@ -26,25 +26,6 @@ const AboutStyled = styled.div`
   }
 `;
 
-export const skills = [
-  "Python",
-  "Machine Learning",
-  "Data Analysis",
-  "Research Methods",
-  "Version Control",
-  "Data Modeling",
-  "Technical Writing",
-  "Statistics",
-  "Info Viz",
-  "Pipelines/ETL",
-  "Collaboration",
-  "JavaScript",
-  "R",
-  "Bash",
-  "SQL",
-  "React"
-];
-
 export const ideas = [
   {
     key: "AD",
@@ -91,9 +72,7 @@ export const AboutSection: React.FC = () => (
             a minor in Statistics
           </li>
           <li>5+ years professional experience in software development</li>
-          <li>
-            Currently working in Data Analysis for a BC Crown Corporation
-          </li>
+          <li>Currently working in Data Analysis for a BC Crown Corporation</li>
         </ul>
       </section>
     </AboutStyled>
@@ -111,19 +90,17 @@ export const InterestsSection: React.FC = () => (
       of computer science in other domains), and research that intersects
       software & statistics.
     </p>
-    <p>
-      Some concepts that stand out to me:
-      </p>
-      <ul>
-        <li>Bioinformatics/computational biology & health informatics</li>
-        <li>
-          AI/machine learning (machine ethics, interpretability, sustainability)
-        </li>
-        <li>
-          Data science & engineering (pipelines, data analysis, information
-          retrieval, knowledge graphs, data governance)
-        </li>
-        <li>HCI (accessibility, UX) and information visualization</li>
-      </ul>
+    <p>Some concepts that stand out to me:</p>
+    <ul>
+      <li>Bioinformatics/computational biology & health informatics</li>
+      <li>
+        AI/machine learning (machine ethics, interpretability, sustainability)
+      </li>
+      <li>
+        Data science & engineering (pipelines, data analysis, information
+        retrieval, knowledge graphs, data governance)
+      </li>
+      <li>HCI (accessibility, UX) and information visualization</li>
+    </ul>
   </section>
 );
