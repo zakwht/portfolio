@@ -1,14 +1,92 @@
 import React from "react";
-import AboutRoute from "../components/AboutSection";
-import ProjectRoute from "../components/ProjectsSection";
+import { AboutSection, ideas, InterestsSection } from "../components/Biography";
 import { GetStaticProps } from "next";
 import projects from "../../content/projects.json";
-import { Project } from "../components/Project";
+import { Project, ProjectSummary } from "../components/Project";
+import { ProposalSummary } from "../components/Proposal";
+import { SkillsSection } from "../components/Skills";
+
+
+// https://heat.csc.uvic.ca/coview/course/2021091/CSC482B
+// https://heat.csc.uvic.ca/coview/course/2021091/CSC421
+
+const course = [
+  {
+    title: "Computational Biology Algorithms",
+    code: "CSC482B",
+    grade: "A+",
+    overview: "This course is an introduction to algorithms and their applications in bioinformatics. Topics include algorithms for sequence comparison/alignment, large-scale biological database search, evolutionary tree reconstruction, and identification of important features in nucleic acid and protein sequences and underlying computational techniques.",
+    outline: "https://heat.csc.uvic.ca/coview/course/2021091/CSC482B"
+  },
+  {
+    title: "Intro to Artificial Intelligence",
+    code: "CSC421",
+    grade: "A+",
+    overview: "This course explores theory, techniques, philosophy, and history of artificial intelligence.",
+    outline: "https://heat.csc.uvic.ca/coview/course/2021091/CSC421"
+  },
+   {
+    title: "Data Mining",
+    code: "SENG474",
+    grade: "A+",
+    overview: "This course is an introduction to Data Mining/Machine Learning, a sub-field of artificial intelligence that is all about how algorithms can use experience to improve their performance on tasks. This course will introduce you to many foundational data mining/machine learning methods and give you both a theoretical grounding as well as ample practical experience in implementing and using these methods on real data.",
+    outline: "https://heat.csc.uvic.ca/coview/course/2021011/SENG474"
+  },
+    {
+    title: "Operations Research: Linear Programming",
+    code: "CSC446",
+    grade: "A",
+    overview: "This course is an introduction to mathematical optimization, focusing on the theory and applications of linear programming. The study of linear programming combines elements of algorithm design, geometry, linear algebra and numerical analysis.",
+    outline: "https://heat.csc.uvic.ca/coview/course/2021051/CSC445"
+  },
+  {
+    title: "Applied Regression Analysis",
+    code: "STAT353",
+    grade: "A-",
+    overview: "An outline of linear regression theory with applications; multiple linear regression, polynomial regression, model adequacy checking, variable transformation, variable selection, indicator variable, diagnostics for leverage and influential observations, multicollinearity problem, model selection, stepwise regression, prediction and inference.",
+    outline: "https://www.uvic.ca/calendar/archives/202109/undergrad/index.php#/courses/rJYCgt6m4"
+  },
+  {
+    title: "Operations Research: Simulations",
+    code: "CSC445",
+    grade: "A",
+    overview: "It is generally expensive to evaluate real-world systems via experimental measurement. As an alternative evaluation methodology, simulation offers a much cheaper and easier way to test the system performance. This course is to introduce the basics of discrete event simulation and its application in performance evaluation.",
+    outline: "https://heat.csc.uvic.ca/coview/course/2020091/CSC446"
+  },
+  {
+    title: "Data Analysis",
+    code: "STAT359",
+    grade: "B+",
+    overview: "An introductory data analysis course for students who have had an introduction to descriptive statistics, probability distributions, estimation, hypothesis testing and confidence intervals. Emphasis is placed on proper use of computer software, interpretation of output and assumptions required for use of each statistical method. Topics may include: linear and nonlinear regression, time series analysis, analysis of variance, design of experiments, generalized linear models, repeated measures analysis, survival analysis, methods for multivariate data, and nonparametric methods.",
+    outline: "https://www.uvic.ca/calendar/archives/202205/undergrad/index.php#/courses/rJiRltTQE"
+  },
+  {
+    title: "Honours Project & Seminar: Bioinformatics",
+    code: "CSC499",
+    grade: "A+",
+    overview: "This project will explore the importance of explainability in bioinformatics by looking at the findings of existing studies on ACE2 mutations that affect the susceptibility to SARS-CoV-2 that did not involve a contextual consideration of the results (ie, studies that identified mutations that influence susceptibility without an explanation of why they are influential). The main steps will be: (1) Design a classification model based on the existing findings and use it to classify new ACE2 sequences. (2) Investigate the misclassifications in the model. (3) Explore the original findings to understand why some mutations are influential to susceptibility. (4) Create a new model based on the reduced findings and compare the results with the original. The project will discuss the naivety of machine-learning-based analyses that don’t back the results with understandable explanations."
+  }
+]
 
 export const HomeRoute = ({ projects }: { projects: Project[] }) => (
   <>
-    <AboutRoute />
-    <ProjectRoute projects={projects} />
+    <AboutSection />
+    <SkillsSection />
+    <InterestsSection />
+    <section id="ideas">{ideas.map(ProposalSummary)}</section>
+    <section id="courses" className="two-col">
+      {course.map(({ code, title, grade }) => (
+        <p key={code}>
+          {code} <span className="light">{title} ({grade})</span>
+        </p>
+      ))}
+    </section>
+    <section className="two-col" id="projects">
+      {projects.filter((p) => p.group === "UVic").sort((a,b) => a.description.length - b.description.length).map(ProjectSummary)}
+    </section>
+    <section className="two-col" id="personal projects">
+      {projects.filter((p) => p.role === "Personal Project").sort((a,b) => a.description.length - b.description.length).map(ProjectSummary)}
+    </section>
   </>
 );
 
