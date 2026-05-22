@@ -29,7 +29,7 @@ export const Stack = styled.ul`
 const iconSlug = (tool: string) =>
   tool.toLowerCase() in icons
     ? icons[tool.toLowerCase()]
-    : tool.replace(".", "dot").toLowerCase();
+    : tool.replace(".", "dot").replace(/ /g, "").toLowerCase();
 
 export const StackIcon = ({ tool }: { tool: string }) => (
   <img

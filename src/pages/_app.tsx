@@ -120,7 +120,7 @@ export const App = ({ Component, pageProps }: AppProps) => (
     </Head>
     <HeaderStyled>
       <h1>Zak White</h1>
-      <h3>Computer Scientist</h3>
+      <h3>Computer Scientist</h3> { /* Data Analyst, Software Developer, Future Graduate Student... */}
     </HeaderStyled>
     <main>
       <Component {...pageProps} />

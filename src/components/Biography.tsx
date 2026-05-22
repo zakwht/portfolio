@@ -47,7 +47,7 @@ export const ideas = [
     question:
       "To what extent does semantic HTML improve machine interpretability and downstream usability of web content?",
     abstract:
-      "Conduct an empirical study of the effects on semantic web design for SEO, accessibility, performance, and machine interpretability",
+      "Conduct an empirical study of the effects on semantic web design for SEO, accessibility, performance, and machine interpretability.",
     topics: [
       "Data Engineering",
       "Information Retrieval",

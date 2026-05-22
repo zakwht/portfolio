@@ -97,5 +97,13 @@
     "year": "2021",
     "stack": ["Python", "LaTeX"],
     "topics": ["Bioinformatics", "Machine Learning"]
-  }
+  },
+  {
+    "key": "pokeanalytics",
+    "title": "Pokémon Analytics",
+    "role": "Personal Project",
+    "description": "Descriptive analysis & visualization of the Pokémon franchise, based on structured relational data.",
+    "year": "2026",
+    "stack": ["JavaScript", "Apache eCharts", "SQL"]
+ }
 ]
