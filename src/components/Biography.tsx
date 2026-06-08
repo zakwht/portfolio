@@ -54,6 +54,16 @@ export const ideas = [
       "Accessibility",
       "Web Engineering"
     ]
+  }, {
+    key: "Recruitment",
+    headline: "Measuring Demographic Bias in ML-Based Professional Recruitment Systems",
+    question: "To what extent do LLM-powered recruitment tools produce different candidate rankings when equivalent resumes are associated with different demographic characteristics?",
+    abstract: "Conduct a controlled experimental design in which synthetic resumes with equivalent qualifications but varying demographic indicators (e.g., names, gender cues, ethnic markers) are evaluated by multiple AI screening systems.",
+    topics: [
+      "Machine Learning",
+      "Data Ethics",
+      "ML Interpretability"
+    ]
   }
 ];
 

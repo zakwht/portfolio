@@ -40,6 +40,7 @@ const topicColor: { [key: string]: string } = {
   "Data Engineering": "#152",
   "Information Retrieval": "#152",
   "Accessibility": "#741",
+  "Data Ethics": "#741",
   "Web Engineering": "#152",
   "Bioinformatics": "#d7e",
   "Information Visualization": "#741",
