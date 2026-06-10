@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import styled from "@emotion/styled";
 import "../App.css";
 import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import Head from "next/head";
 
 const HeaderStyled = styled.header`
   color: white;
@@ -10,15 +11,16 @@ const HeaderStyled = styled.header`
   justify-content: space-between;
   position: relative;
 
-  @media only screen and (max-width: 480px) {
-    padding: 20px 28px;
-  }
-
-  h1 {
+  h1,
+  h3 {
     margin-block: 0;
     font-weight: 200;
     position: absolute;
     right: 48px;
+  }
+
+  h3 {
+    top: 88px;
   }
 `;
 
@@ -88,23 +90,41 @@ const FooterLinksStyled = styled.nav`
   }
 `;
 
-const MainStyled = styled.main`
-  padding-bottom: 80px;
-  margin: 32px 24px 0;
-
-  @media only screen and (max-width: 480px) {
-    padding-bottom: 120px;
-  }
-`;
-
 export const App = ({ Component, pageProps }: AppProps) => (
   <>
+    <Head>
+      <script type="application/ld+json">
+        {`{
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "@id": "https://zakwhite.ca",
+        "name": "Zak White",
+        "nationality": "Canada",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Victoria",
+          "sameAs": "https://uvic.ca"
+        },
+        "gender": "Male",
+        "description": "Software Developer",
+        "jobTitle": "Software Developer",
+        "url": "https://zakwhite.ca",
+        "image": "https:/zakwhite.ca/img/birdwatching.jpeg",
+        "sameAs": [
+          "https://github.com/zakwht",
+          "https://www.linkedin.com/in/zakwhite/",
+          "https://ebird.org/profile/NTk3MjU4OQ"
+        ]
+      }`}
+      </script>
+    </Head>
     <HeaderStyled>
       <h1>Zak White</h1>
+      <h3>Computer Scientist</h3> { /* Data Analyst, Software Developer, Future Graduate Student... */}
     </HeaderStyled>
-    <MainStyled>
+    <main>
       <Component {...pageProps} />
-    </MainStyled>
+    </main>
     <FooterStyled>
       <FooterLinksStyled>
         <a href="https://github.com/zakwht" data-link="GitHub">
